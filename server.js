@@ -10,11 +10,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one', function(req, res) {
-   res.send("Article One web page is under maintenance") ;
+  res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
 });
 
 app.get('/article-two', function(req, res) {
-   res.send("Article two web page is under maintenance") ;
+   res.send("Article Two web page is under maintenance") ;
 });
 
 app.get('/article-three', function(req, res) {
