@@ -52,7 +52,7 @@ var articles = {
                     </p>`
     }
 };
-function createTemplate (date) {
+function createTemplate (data) {
     title = data.title;
     date = data.date;
     heading = data.heading;
