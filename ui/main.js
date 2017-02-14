@@ -5,3 +5,10 @@ console.log('Loaded!');
 var element = document.getElementById('main-text');
     
 element.innerHTML = 'New Value';
+
+//Move the Image
+
+var img = document.getElementById('pic');
+pic.onClick = function() {
+    img.style.marginleft = "200px";
+};
