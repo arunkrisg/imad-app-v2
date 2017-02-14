@@ -9,6 +9,11 @@ element.innerHTML = 'New Value';
 //Move the Image
 
 var img = document.getElementById('pic');
-img.onClick = function() {
-    img.style.marginLeft = '100px';
+var marginLeft = 0;
+function moveRight () {
+    marginLeft = marginLeft + 10;
+    img.style.marginLeft = margingLeft + 'px';
+}
+img.onClick = function () {
+    var interval = setInterval(moveRight, 100);
 };
