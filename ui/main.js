@@ -10,5 +10,5 @@ element.innerHTML = 'New Value';
 
 var img = document.getElementById('pic');
 img.onClick = function() {
-    img.style.marginLeft = "200px";
+    img.style.marginLeft = '200px';
 };
