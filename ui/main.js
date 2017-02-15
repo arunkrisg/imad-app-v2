@@ -24,7 +24,7 @@ img.onClick = function () {
 var button = document.getElementById('counter');
 var counter = 0;
 
-button.onClick() = function () {
+button.onClick = function () {
         
     //Make a request to the conter end point
     
@@ -34,4 +34,4 @@ button.onClick() = function () {
     counter = counter + 1;
     var span = document.getElementById('count');
     span.innerHTML = counter.toString();
-}
+};
