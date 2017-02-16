@@ -47,9 +47,6 @@ button.onclick = function () {
 };
 
 //Submit Names
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
-
 var submit = document.getElementById('submit_button');
 submit.onlClick = function () {
     
@@ -75,6 +72,8 @@ submit.onlClick = function () {
         //Not done yet
     };
     //Make the request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open('GET','http://arunkrisg.imad.hasura-app.io/submit-name?name=' + name,true);
     request.send(null);
 };
