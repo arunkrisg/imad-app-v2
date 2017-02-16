@@ -45,3 +45,19 @@ button.onclick = function () {
     request.open('GET','http://arunkrisg.imad.hasura-app.io/counter',true);
     request.send(null);
 };
+
+//Submit Names
+var nameInput = document.getElementById ("name");
+var name = nameInput.value;
+
+var submit = document.getElementById ("submit_button");
+submit.onlclick = function () {
+    // Make a request to the server amd send the name
+    
+    //Capture a lsit of names and render it as a list
+    var names = ['name1','name2','name3','name4'];
+    var lsit = '';
+    for (var i = 0; i < names.length; i++) {
+        list += '<li>' + names[i] + '</li>';
+    }
+}
