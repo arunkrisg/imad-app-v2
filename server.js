@@ -148,8 +148,11 @@ app.get('/articles/:articleName', function(req, res) {
   //articleName == article-one
   //articles[articleName] == {} content object for article one
   //SELECT * FROM article WHERE title = 'article-one'
+  //SELECT * FROM article WHERE title = ''; DELETE WHERE a = 'asdf' --- A hacker can hack the system by using this way and delete the records from the database
+  // To overcome the above situation use parametrs ($1) is used in PostgreSQL in the query to protect the data as shown below
+  //SELECT * FROM article WHERE title = '\'; DELETE WHERE a = \'asdf'
   
-  pool.query("SELECT * FROM article WHERE title = '" + req.params.articleName + "'", function (err, result) {
+  pool.query("SELECT * FROM article WHERE title = $1" , [req.params.articleName], function (err, result) {
     if (err)   {
         res.status(500).send(err.toString());
     } else {
